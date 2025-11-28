@@ -1,0 +1,165 @@
+/* ปุ่ม Export container */
+.csv-container {
+    margin-bottom: 12px;
+}
+
+/* ปุ่ม CSV */
+.csv-button {
+    padding: 6px 14px;
+    background-color: #1976d2;
+    color: white;
+    border-radius: 5px;
+    font-size: 14px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.csv-button:hover {
+    background-color: #0f5ca8;
+}
+
+/* Table wrapper */
+.table-wrapper {
+    max-height: 70vh;
+    overflow: auto;
+    border-radius: 8px;
+    border: 1px solid #d0d0d0;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+
+/* Table style */
+.nice-table {
+    width: 85%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+/* Header */
+.nice-table th {
+    background: #efefef;
+    font-weight: bold;
+    padding: 8px 10px;
+    border: 1px solid #d0d0d0;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    text-align: left;
+}
+
+/* Cells */
+.nice-table td {
+    padding: 6px 10px;
+    border: 1px solid #e0e0e0;
+    white-space: nowrap;
+}
+
+/* alternate rows */
+.nice-table tr:nth-child(even) {
+    background: #fafafa;
+}
+
+/* hover effect */
+.nice-table tr:hover {
+    background: #e8e8e8;
+}
+
+/* no data text */
+.no-data {
+    padding: 10px;
+    color: #777;
+}
+/* TableComponent.css */
+
+/* Pagination container */
+.pagination {
+  display: flex;
+  justify-content: center; /* กึ่งกลาง */
+  align-items: center;
+  gap: 10px; /* ระยะห่างปุ่มกับข้อความ */
+  margin-top: 10px;
+  font-family: Arial, sans-serif;
+}
+
+/* ปุ่ม Previous / Next */
+.pagination button {
+  background-color: #4CAF50; /* สีเขียว */
+  color: white;
+  border: none;
+  padding: 5px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+/* ปุ่ม disabled */
+.pagination button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Hover effect */
+.pagination button:not(:disabled):hover {
+  background-color: #45a049;
+}
+
+/* ข้อความ Page x of y */
+.pagination span {
+  font-weight: bold;
+  font-size: 14px;
+  color: #333;
+}
+
+.flex-container-csv{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+
+.flex-container-csv {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.found-rows {
+  font-weight: 500;
+  color: #333;
+  font-size: 14px;
+}
+
+.row-count {
+  display: inline-block;
+  background-color: #007bff; /* สีฟ้า */
+  color: #fff;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-weight: 600;
+  margin: 0 4px;
+  font-size: 13px;
+}
+
+.csv-button {
+  background-color: #28a745;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.csv-button:hover {
+  background-color: #218838;
+}
+
+#no-border-button{
+  border-width: 0px;
+}
+
+.selected-row {
+  background-color: #d1e7fd; /* สีฟ้าอ่อน */
+}

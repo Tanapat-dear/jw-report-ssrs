@@ -1,0 +1,144 @@
+/* Layout wrapper */
+.layout-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 240px;
+  background: #111827;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+/* Brand */
+.sidebar-brand .brand-link {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 2rem;
+}
+
+/* Menu */
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-menu li {
+  margin-bottom: 0.75rem;
+}
+
+.sidebar-menu li a {
+  color: #d1d5db;
+  text-decoration: none;
+  padding: 0.6rem 0.75rem;
+  display: block;
+  border-radius: 6px;
+  transition: background .15s, color .15s;
+}
+
+/* Hover */
+.sidebar-menu li a:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+/* Active state */
+.sidebar-menu li a.active {
+  background: #3b82f6;
+  color: white;
+  font-weight: 600;
+}
+
+.content{
+    width:85%;
+}
+
+/* Dropdown toggle */
+.dropdown-toggle {
+  color: #d1d5db;
+  padding: 0.6rem 0.75rem;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background .15s, color .15s;
+}
+
+.dropdown-toggle:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+/* Arrow */
+.arrow {
+  transition: transform 0.2s;
+}
+
+.arrow.open {
+  transform: rotate(180deg);
+}
+
+/* Submenu */
+.submenu {
+  list-style: none;
+  padding-left: 1rem;
+  margin-top: 0.25rem;
+}
+
+.submenu li a {
+  display: block;
+  padding: 0.45rem 0.75rem;
+  color: #d1d5db;
+  font-size: 0.9rem;
+  border-radius: 6px;
+}
+
+.submenu li a:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.submenu li a.active {
+  background: #3b82f6;
+  color: white;
+  font-weight: 600;
+}
+.dropdown-toggle.active {
+  background: #3b82f6;
+  color: white;
+  font-weight: 600;
+  border-radius: 6px;
+}
+
+.reports-category-active {
+  background: #475569; /* Slate-600 */
+  color: white;
+  font-weight: 600;
+}
+
+.brand-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #f43f5e, #f97316); /* แดง→ส้ม */
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: filter 0.2s;
+}
+
+.brand-link:hover {
+  filter: brightness(1.1);
+}

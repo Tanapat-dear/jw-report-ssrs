@@ -1,0 +1,171 @@
+.header-custom {
+  padding: 20px;
+  max-width: 95%;
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
+}
+
+.styled-heading {
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 10px;
+  color: #007bff;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.flex-container {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center; /* จัดองค์ประกอบให้อยู่กึ่งกลางในแนวตั้ง */
+  gap: 20px; /* ระยะห่างระหว่างองค์ประกอบภายใน */
+  padding: 15px;
+  background-color: #f4f7f9;
+  border-radius: 5px;
+}
+
+.label-filter {
+  font-weight: bold;
+  color: #0056b3; /* สีน้ำเงินเข้ม */
+}
+
+.data-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  height: 40px;
+}
+
+/* 🟢 สไตล์เมื่อนำเมาส์ไปชี้ */
+.data-button:hover {
+  background-color: #0056b3; /* สีเข้มขึ้นเล็กน้อย */
+}
+
+/* 🚫 สไตล์เมื่อปุ่มถูกปิดใช้งาน (disabled) */
+.data-button:disabled {
+  background-color: #a0a0a0; /* ทำให้เป็นสีเทา */
+  cursor: not-allowed; /* เปลี่ยนเคอร์เซอร์เป็นสัญลักษณ์ห้าม */
+}
+
+.select-filter {
+  width: 1000ch; /* กว้างเท่ากับ 20 ตัวอักษร */
+  
+}
+
+
+
+/* --------------------------------------------------
+   Container หลัก
+-------------------------------------------------- */
+.header-custom {
+  background: white;
+  padding: 20px 30px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+  margin-bottom: 25px;
+}
+
+/* Title */
+.styled-heading {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #0066cc;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* --------------------------------------------------
+   Filter Section (แก้ใหม่ให้เป็น pattern เดียว)
+-------------------------------------------------- */
+.filter-bar {
+  display: grid;
+  /* จัดเรียงอัตโนมัติ: ความกว้างขั้นต่ำ 180px, ถ้ามีที่เหลือให้ขยายจนเต็ม (1fr) */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px; /* ระยะห่างระหว่างช่อง */
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.filter-item {
+  width: 100%; /* ให้ input ขยายเต็มช่อง grid ของตัวเอง */
+}
+
+.filter-item label {
+  font-weight: 600;
+  color: #004a99;
+  font-size: 14px;
+}
+
+.filter-item select,
+.filter-item input[type="date"] {
+  height: 36px;
+  padding: 6px 8px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+/* --------------------------------------------------
+   ปุ่ม Load Data
+-------------------------------------------------- */
+.data-button {
+  margin-top: 15px;
+  padding: 10px 25px;
+  font-size: 15px;
+  font-weight: 600;
+  background: #007bff;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.data-button:hover {
+  background: #0069d9;
+}
+
+.data-button:disabled {
+  background: #a5c8ff;
+  cursor: not-allowed;
+}
+
+
+.autocomplete-box{
+  background-color: #fff;
+  width: 100% !important;
+}
+/* --------------------------------------------------
+   Error Dialog 
+-------------------------------------------------- */
+.error-box {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #ff4d4f;
+  padding: 15px 20px;
+  border-radius: 8px;
+  color: white;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+  font-weight: 600;
+  animation: fadeIn 0.3s ease;
+}
+
+.gap-process{
+  margin: 16px;
+  margin-bottom: 50px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
