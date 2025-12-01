@@ -21,7 +21,7 @@ export default function DataExporter() {
     const [master_mccode, setMasterMcCode] = useState<MasterMccodeType[]>([]);
     const [isLoading, setIsLoading] = useState(false);
     const [apiLoading, setapiLoading] = useState(false)
-    const [isError,setisError] = useState(false);
+    const [isError,setisError] = useState({error:false, message: ''});
     const [data,setData] = useState<any>({});
 
     const ProcessOption = useMemo(() => {
@@ -86,16 +86,16 @@ export default function DataExporter() {
     const fetchData = async () => {
       try {
         setapiLoading(true)
-        
         const res = await axios.get(`${import.meta.env.VITE_API_URL}/master?process=${params.process}`);
         const data = await res.data;
         setMasterMcCode(data.data);
         
         setapiLoading(false)
-        setisError(false)
+        setisError({error: false , message: ""})
+
       } catch (err) {
         console.error("Error fetching master_mccode:", err);
-        setisError(true)
+        setisError({error: true , message: "Error: Cannot Fetch Master Table Data, Please try again later!"})
         setapiLoading(false)
       }
     };
@@ -144,7 +144,7 @@ export default function DataExporter() {
             }
 
             setIsLoading(true);
-            setisError(false);
+            setisError({error:false,message:''});
 
             const res = await axios.get(
             `http://10.17.77.217:6813/api/report/${dataselected.machine_code}?startdate=${dataselected.startdate}&enddate=${dataselected.enddate}&tablename=${tableName}`
@@ -159,7 +159,7 @@ export default function DataExporter() {
         } catch (err) {
             console.error('Error fetching data:', err);
             setIsLoading(false);
-            setisError(true);
+            setisError({error:true,message:'Error: Cannot Load data, Please try again later!'});
         } finally {
             setIsLoading(false);
         }
@@ -213,6 +213,7 @@ export default function DataExporter() {
                 
                         <Autocomplete
                             fullWidth
+                            
                             options={ProcessOption} 
                             getOptionLabel={(option) => option.label}
                             value={ProcessOption.find(p => p.value === dataselected.process) || null} // object หรือ null
@@ -335,7 +336,7 @@ export default function DataExporter() {
         <div className='gap-process'>
             <TableComponent data={data.data} startdate={dataselected.startdate} enddate={dataselected.enddate} mccode={dataselected.machine_code}/>
         </div>
-        {isError && <ErrorDialog  />}
+        {isError.error && <ErrorDialog message={isError.message} />}
         
         </>
     )

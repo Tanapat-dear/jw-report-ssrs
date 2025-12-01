@@ -142,3 +142,27 @@
 .brand-link:hover {
   filter: brightness(1.1);
 }
+
+
+.login-btn-wrapper {
+  padding: 1rem;
+  text-align: center; /* กึ่งกลางแนวนอน */
+  justify-self: end;
+}
+
+/* ปุ่ม Login / Logout */
+.login-btn {
+  width: 100%;           /* เต็มความกว้าง sidebar หรือปรับตามต้องการ */
+  padding: 0.5rem 1rem;  /* ระยะขอบด้านใน */
+  background-color: #007bff; /* สีปุ่ม */
+  color: white;          /* ตัวอักษรสีขาว */
+  border: none;          /* ลบเส้นขอบ */
+  border-radius: 0.25rem; /* มุมมนเล็กน้อย */
+  cursor: pointer;       /* เปลี่ยน cursor เป็น pointer */
+  font-size: 1rem;
+  transition: background-color 0.2s ease;
+}
+
+.login-btn:hover {
+  background-color: #0056b3; /* สีเข้มเมื่อ hover */
+}

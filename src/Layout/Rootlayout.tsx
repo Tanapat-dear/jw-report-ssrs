@@ -5,7 +5,7 @@ import '../styles/Rootlayout.css';
 export default function RootLayout() {
 
   const location = useLocation();
-  const [openReports, setOpenReports] = useState(false);
+  const [openReports, setOpenReports] = useState(true);
 
   // ถ้า URL อยู่ใน /reports/* ให้เปิด dropdown อัตโนมัติ
   useEffect(() => {
@@ -117,15 +117,17 @@ export default function RootLayout() {
               Master Table
             </NavLink>
           </li>
-           
+          
 
         </ul>
+         
       </aside>
 
+          
       <main className="content">
         <Outlet />
       </main>
-
+            
     </div>
   );
 }

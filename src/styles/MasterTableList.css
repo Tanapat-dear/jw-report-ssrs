@@ -1,0 +1,29 @@
+.table-wrapper {
+  height: 75vh;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin: 15px;
+}
+
+.master-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.master-table th {
+  position: sticky;
+  top: 0;
+  background: #1e293b;
+  color: white;
+  padding: 10px;
+}
+
+.master-table td {
+  padding: 8px;
+  border-bottom: 1px solid #eee;
+}
+
+.table-row:hover {
+    background-color: #e6edf5;
+}

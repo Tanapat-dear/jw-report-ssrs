@@ -4,8 +4,8 @@ export interface MasterMccodeType{
     process_group: string;
     master_group:string;
     mc_code:string;
-    actv_table:string;
-    status_table:string;
+    actv_table: string | null;
+    status_table:string | null;
     set_table:string | null;
 }
 
@@ -39,4 +39,16 @@ export interface TableComponentTypeProp{
 export interface TableRowTypeProp{
   row: any;
   headers:any;
+}
+
+export type MasterDataType = {
+
+  id: string;
+  process_group: string;
+  master_group: string;
+  mc_code: string;
+  actv_table: string | null;
+  status_table: string | null;
+  set_table: string | null;
+
 }

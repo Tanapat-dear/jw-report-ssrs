@@ -1,0 +1,113 @@
+/* Container */
+.home-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 30px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+/* Title & Description */
+.home-title {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #0d6efd;
+}
+
+.home-desc {
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+/* --- Section Styling --- */
+.section-block {
+  margin-bottom: 50px;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  margin-bottom: 25px; /* เพิ่มระยะห่างด้านล่าง */
+  color: #0d6efd;
+  /* ลบเส้นใต้และใช้สีหลักตามภาพ */
+  border-bottom: 3px solid #0d6efd; 
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* --- Quick Access Styling --- */
+.group-label {
+    font-size: 1.3rem;
+    color: #555;
+    margin-bottom: 15px;
+    margin-top: 30px;
+}
+
+/* Reports Grid: 6 columns for better visual balance */
+.report-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 15px;
+}
+
+
+.master-grid {
+    display: flex; 
+    justify-content: justify-start; 
+   
+}
+
+
+.master-btn {
+    width: 250px; 
+}
+.quick-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0d6efd; /* สีฟ้าหลัก */
+  color: white;
+  text-decoration: none;
+  padding: 20px 10px;
+  border-radius: 8px; /* ปรับให้โค้งมนเล็กน้อย */
+  font-weight: 600;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15); /* เงาที่ชัดเจนขึ้น */
+  transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.quick-btn:hover {
+  background-color: #0b5ed7;
+  transform: translateY(-2px); /* เอฟเฟกต์ยกขึ้น */
+  box-shadow: 0 6px 10px rgba(0,0,0,0.2);
+}
+
+/* --- How-to List --- */
+.howto-list {
+  padding-left: 20px;
+  line-height: 1.8;
+}
+
+.howto-list li {
+    margin-bottom: 8px;
+}
+
+/* --- Footer --- */
+.footer {
+  margin-top: 50px;
+  padding-top: 20px;
+  border-top: 1px solid #ddd;
+  font-size: 0.9rem;
+  color: #555;
+  text-align: center; /* จัดให้อยู่ตรงกลาง */
+}
+.footer-link {
+  color: #0d6efd;
+  text-decoration: none; /* ลบขีดเส้นใต้ตามปกติ */
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}

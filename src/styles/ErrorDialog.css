@@ -22,3 +22,18 @@
 @keyframes fadeOut {
   to { opacity: 0; transform: translateY(20px); } /* เลื่อนขึ้นเล็กน้อยก่อนหาย */
 }
+
+.error-progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 100%;
+  animation: progressDecrease 4.7s linear forwards; /* 10 วินาที ให้ตรงกับ fadeOut */
+}
+
+@keyframes progressDecrease {
+  from { width: 100%; }
+  to { width: 0%; }
+}

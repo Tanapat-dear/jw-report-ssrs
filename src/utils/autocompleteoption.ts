@@ -8,10 +8,3 @@ export const FactoryOption: Array<AutocompleteOption> =
     {label:'Factory K1',value:'K1'},
 ]
 
-
-export const TableOption: Array<AutocompleteOption> =
-[
-    {label:'ACTV',value:'ACTV'},
-    {label:'STATUS',value:'STATUS'},
-    {label:'SET',value:'SET'},
-]

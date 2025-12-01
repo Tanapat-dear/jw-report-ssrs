@@ -47,7 +47,7 @@ const DownloadCSV = ({ data, fileName }: any ) => {
         disabled={isLoading}
       >
         {isLoading ? "Preparing..." : "Download CSV"}
-      </button>
+    </button>
   );
 }
 
